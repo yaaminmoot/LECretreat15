@@ -34,8 +34,10 @@ def MantelTest(distances1, distances2, randomizations):
 
 ############ PairwiseDistances() ############
 #   Takes a list of strings. For each pair of strings, calculate the Levenshtein
-#   edit distance and store it to a new list. Return this new list of pairwise
-#   distances.
+#   edit distance between them using the LevenshteinDistance() function below.
+#   Store this value to a new list. Finally, return the new list of pairwise
+#   distances. If your input list has 10 items, your output list should have 45
+#   pairings.
 
 
 
