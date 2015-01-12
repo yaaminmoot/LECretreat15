@@ -2,7 +2,7 @@
 
 # IMPORTS
 from sys import argv
-from scipy import random, spatial, stats
+from scipy import mean, random, spatial, stats, std
 
 
 # MantelTest()
