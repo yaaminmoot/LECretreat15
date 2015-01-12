@@ -24,9 +24,7 @@ def MantelTest(distances1, distances2, randomizations):
 
 
 
-# This is me adding in my new
-# code for this
-# function
+
 
 
 
@@ -41,7 +39,7 @@ def MantelTest(distances1, distances2, randomizations):
 
 
 
-# Here's some new code for team 2
+
 
 
 
@@ -58,7 +56,7 @@ def MantelTest(distances1, distances2, randomizations):
 
 
 
-# And here's team 3's code
+
 
 
 
