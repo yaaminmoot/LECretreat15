@@ -12,10 +12,10 @@ from scipy import random, spatial, stats
 #   significance of the veridical correlation.
 
 def MantelTest(distances1, distances2, randomizations):
-  r = stats.pearsonr(distances1, distances2)[0]
-  m, sd = MonteCarlo(distances1, distances2, randomizations)
-  z = (r-m)/sd
-  return r, m, sd, z
+    r = stats.pearsonr(distances1, distances2)[0]
+    m, sd = MonteCarlo(distances1, distances2, randomizations)
+    z = (r-m)/sd
+    return r, m, sd, z
 
 
 ############ ReadFile() ############
@@ -83,8 +83,8 @@ def ShuffleDistances(pairwise_distances):
 
 
 if __name__ == '__main__':
-	strings, meanings = ReadFile(argv[1])
+    strings, meanings = ReadFile(argv[1])
     pairwise_dist_strings = PairwiseDistances(strings)
     pairwise_dist_meanings = PairwiseDistances(meanings)
-	r, m, sd, z = MantelTest(pairwise_dist_strings, pairwise_dist_meanings, 10000)
+    r, m, sd, z = MantelTest(pairwise_dist_strings, pairwise_dist_meanings, 10000)
     print r, m, sd, z
