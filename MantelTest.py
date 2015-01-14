@@ -102,9 +102,16 @@ def ShuffleDistances(pairwise_distances):
     return shuffled_vector
 
 
-if __name__ == '__main__':
-    strings, meanings = ReadFile(argv[1])
+# RunMantel()
+#   Reads in file and runs Mantel Test on the data
+
+def RunMantel(filename):
+    strings, meanings = ReadFile(filename)
     pairwise_dist_strings = PairwiseDistances(strings)
     pairwise_dist_meanings = PairwiseDistances(meanings)
     r, m, sd, z = MantelTest(pairwise_dist_strings, pairwise_dist_meanings, 10000)
     print r, m, sd, z
+
+
+if __name__ == '__main__':
+    RunMantel(argv[1])
