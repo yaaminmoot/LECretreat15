@@ -24,18 +24,7 @@ def MantelTest(distances1, distances2, randomizations):
 
 
 
-def ReadFile(filename):
-	file_handle = open(filename)
-	file_content = file_handle.read()
-	file_handle.close()
-	lines = file_content.split('\n')
-	column1 = []
-	column2 = []
-	for line in lines:
-		part = line.split(',')
-		column1.append(part[0])
-		column2.append(part[1])
-	return column1, column2
+
 
 
 
