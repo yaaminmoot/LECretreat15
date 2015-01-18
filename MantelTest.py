@@ -61,7 +61,7 @@ def MantelTest(distances1, distances2, randomizations):
 def MonteCarlo(meanings, signals, samples):
     coefs = []
     # FIXME make python start indexing at 1 instead of 0
-    for i in samples:
+    for i in range(samples):
         newmeanings = ShuffleDistances(meanings)
         # can't remember if python lists start at 0 or 1, this might be broken
         # Carmen says this should work, Kevin says: be suspicious/cautious anyway
