@@ -22,12 +22,14 @@ def MantelTest(distances1, distances2, randomizations):
 #   Takes a filename as an argument. Opens the file and separates out the data
 #   into two lists (strings and meanings). Returns those two lists.
 
-
-
-
-
-
-
+def ReadFile(filename):
+    words=[]
+    meanings=[]
+    with open(filename) as f:
+        for line in f.readlines():
+            words.append(line.split(',')[0])
+            meanings.append(line.split(',')[1].strip())
+    return words, meanings
 
 ############ END OF ReadFile() ############
 
@@ -59,11 +61,17 @@ def PairwiseDistances(alist):
 #   correlation values into another list. Finally, return the mean and standard
 #   deviation of all these correlation values.
 
+# KEVIN AND CARMEN WERE HERE
 
-
-
-
-
+def MonteCarlo(meanings, signals, samples):
+    coefs = []
+    # FIXME make python start indexing at 1 instead of 0
+    for i in range(samples):
+        newmeanings = ShuffleDistances(meanings)
+        # can't remember if python lists start at 0 or 1, this might be broken
+        # Carmen says this should work, Kevin says: be suspicious/cautious anyway
+        coefs[i] = stats.pearsonr(newmeanings, signals)[0]
+    return mean(coefs), std(coef)
 
 
 ############ END OF MonteCarlo() ############
@@ -117,4 +125,5 @@ def RunMantel(filename):
 
 
 if __name__ == '__main__':
+    print("KEVIN AND CARMEN HERE HELLO!!!")
     RunMantel(argv[1])
