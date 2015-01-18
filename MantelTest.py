@@ -22,12 +22,14 @@ def MantelTest(distances1, distances2, randomizations):
 #   Takes a filename as an argument. Opens the file and separates out the data
 #   into two lists (strings and meanings). Returns those two lists.
 
-
-
-
-
-
-
+def ReadFile(filename):
+    words=[]
+    meanings=[]
+    with open(filename) as f:
+        for line in f.readlines():
+            words.append(line.split(',')[0])
+            meanings.append(line.split(',')[1].strip())
+    return words, meanings
 
 ############ END OF ReadFile() ############
 
