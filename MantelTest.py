@@ -56,11 +56,17 @@ def MantelTest(distances1, distances2, randomizations):
 #   correlation values into another list. Finally, return the mean and standard
 #   deviation of all these correlation values.
 
+# KEVIN AND CARMEN WERE HERE
 
-
-
-
-
+def MonteCarlo(meanings, signals, samples):
+    coefs = []
+    # FIXME make python start indexing at 1 instead of 0
+    for i in samples:
+        newmeanings = ShuffleDistances(meanings)
+        # can't remember if python lists start at 0 or 1, this might be broken
+        # Carmen says this should work, Kevin says: be suspicious/cautious anyway
+        coefs[i] = stats.pearsonr(newmeanings, signals)[0]
+    return mean(coefs), std(coef)
 
 
 ############ END OF MonteCarlo() ############
