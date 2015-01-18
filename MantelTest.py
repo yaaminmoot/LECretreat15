@@ -28,7 +28,7 @@ def ReadFile(filename):
     with open(filename) as f:
         for line in f.readlines():
             words.append(line.split(',')[0])
-            meanings.append(line.split(',')[1])
+            meanings.append(line.split(',')[1].strip())
     return words, meanings
 
 ############ END OF ReadFile() ############
