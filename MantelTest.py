@@ -120,4 +120,5 @@ def RunMantel(filename):
 
 
 if __name__ == '__main__':
+    print("KEVIN AND CARMEN HERE HELLO!!!")
     RunMantel(argv[1])
