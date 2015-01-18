@@ -39,10 +39,13 @@ def MantelTest(distances1, distances2, randomizations):
 #   distances. If your input list has 10 items, your output list should have 45
 #   pairings.
 
-
-
-
-
+def PairwiseDistances(alist):
+    n=len(alist)
+    distances=[]
+    for i in range(0,n-1):
+        for j in range(i+1,n):
+            distances.append(LevenshteinDistance(alist[i],alist[j]))
+    return distances
 
 
 
